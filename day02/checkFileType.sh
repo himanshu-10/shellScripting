@@ -9,13 +9,13 @@ fi
 
 file=$1
 
-if  (( -f $file ));
+if   [[ -f "$file" ]];
 then 
 	echo "$file is regular file"
-elif (( -L $file ));
+elif [[ -L "$file" ]];
 then 
 	echo "$file id soft link"
-elif (( -d $file ));
+elif [[ -d "$file" ]];
 then
 	echo "$file is a directory"
 else
